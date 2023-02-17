@@ -1,5 +1,4 @@
 # Word-War
-A speed-typing game for Android.
 
 ### DESCRIPTION
 	A speed-typing game for Android. Due to keyboard and screen size differences, game is using a built-in keyboard. Made with Godot Engine (v3.5) by using GDScript.
