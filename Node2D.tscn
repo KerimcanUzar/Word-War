@@ -1,0 +1,1036 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://res/Chain.png" type="Texture" id=1]
+[ext_resource path="res://res/Tank.png" type="Texture" id=2]
+[ext_resource path="res://ParallaxBG.gd" type="Script" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
+[ext_resource path="res://res/Swansea.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Variables.gd" type="Script" id=6]
+[ext_resource path="res://res/Dessert.png" type="Texture" id=7]
+[ext_resource path="res://res/Word War.png" type="Texture" id=8]
+[ext_resource path="res://res/SwanseaBold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Chain.gd" type="Script" id=10]
+[ext_resource path="res://Diamond_Button.tres" type="StyleBox" id=11]
+[ext_resource path="res://Diamond_Hover.tres" type="StyleBox" id=12]
+[ext_resource path="res://Keyboard_Font.tres" type="DynamicFont" id=13]
+[ext_resource path="res://keyoard_keys.tres" type="StyleBox" id=14]
+[ext_resource path="res://res/Word War.wav" type="AudioStream" id=15]
+[ext_resource path="res://res/Shoot Tank.wav" type="AudioStream" id=16]
+[ext_resource path="res://res/MusicOn.png" type="Texture" id=17]
+[ext_resource path="res://res/MusicOff.png" type="Texture" id=18]
+[ext_resource path="res://res/Tank Rumble.wav" type="AudioStream" id=19]
+
+[sub_resource type="ImageTexture" id=10]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 17.5778, 1.73333 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 0.772223, 17.9556 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 42
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.839216, 0.709804, 0.490196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.356863, 0.235294, 0.105882, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.552941, 0.352941, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.356863, 0.105882, 0.105882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.356863, 0.105882, 0.105882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.356863, 0.105882, 0.105882, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.552941, 0.164706, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.356863, 0.105882, 0.105882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.356863, 0.105882, 0.105882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=39]
+size = 100
+use_filter = true
+extra_spacing_char = 3
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 38
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 34
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.196078, 0.588235, 0.196078, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.196078, 0.588235, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.129412, 0.784314, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.588235, 0.588235, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.784314, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.588235, 0.588235, 0.196078, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.588235, 0.588235, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.784314, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.588235, 0.588235, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.588235, 0.588235, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.588235, 0.392157, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.588235, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.588235, 0.392157, 0.196078, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.588235, 0.392157, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.588235, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.588235, 0.392157, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.588235, 0.392157, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.588235, 0.196078, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.129412, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.588235, 0.196078, 0.196078, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.588235, 0.196078, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.784314, 0.129412, 0.129412, 1 )
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.588235, 0.196078, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.588235, 0.196078, 0.196078, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 1
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 54
+use_filter = true
+extra_spacing_bottom = 10
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 54
+use_filter = true
+extra_spacing_bottom = 10
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ParallaxBG" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 0, 1 )
+script = ExtResource( 3 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBG"]
+motion_mirroring = Vector2( 0, 2160 )
+
+[node name="Road" type="Sprite" parent="ParallaxBG/ParallaxLayer"]
+position = Vector2( 540, 960 )
+scale = Vector2( 11.25, 11.25 )
+texture = ExtResource( 7 )
+normal_map = SubResource( 10 )
+region_rect = Rect2( 0, 0, 1080, 1920 )
+
+[node name="Chains" type="Node" parent="."]
+
+[node name="Chain" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain2" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain2/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain3" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain3/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain4" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain4/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain5" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain5/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain6" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain6/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain7" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain7/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain8" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain8/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain9" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain9/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Chain10" type="Sprite" parent="Chains"]
+visible = false
+position = Vector2( 540, -48 )
+scale = Vector2( 11.25, 11.25 )
+z_index = -1
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="ChainArea" type="Area2D" parent="Chains/Chain10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chains/Chain10/ChainArea"]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 540, 1020 )
+scale = Vector2( 11.25, 11.25 )
+texture = ExtResource( 2 )
+
+[node name="PlayerArea" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerArea"]
+shape = SubResource( 3 )
+
+[node name="Typed" type="LineEdit" parent="."]
+margin_top = 1232.0
+margin_right = 1080.0
+margin_bottom = 1300.0
+custom_fonts/font = SubResource( 33 )
+align = 1
+
+[node name="Keyboard" type="Panel" parent="."]
+margin_top = 1300.0
+margin_right = 1080.0
+margin_bottom = 1768.0
+custom_styles/panel = SubResource( 31 )
+
+[node name="QWE" type="HBoxContainer" parent="Keyboard"]
+margin_left = 20.0
+margin_top = 4.0
+margin_right = 1056.0
+margin_bottom = 154.0
+
+[node name="Q" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_right = 100.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "Q"
+
+[node name="W" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "W"
+
+[node name="E" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "E"
+
+[node name="R" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "R"
+
+[node name="T" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "T"
+
+[node name="Y" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "Y"
+
+[node name="U" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 624.0
+margin_right = 724.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "U"
+
+[node name="I" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 728.0
+margin_right = 828.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "I"
+
+[node name="O" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 832.0
+margin_right = 932.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "O"
+
+[node name="P" type="Button" parent="Keyboard/QWE" groups=["keyboard_keys"]]
+margin_left = 936.0
+margin_right = 1036.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "P"
+
+[node name="ASD" type="HBoxContainer" parent="Keyboard"]
+margin_left = 80.0
+margin_top = 160.0
+margin_right = 1012.0
+margin_bottom = 310.0
+
+[node name="A" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_right = 100.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "A"
+
+[node name="S" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "S"
+
+[node name="D" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "D"
+
+[node name="F" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "F"
+
+[node name="G" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "G"
+
+[node name="H" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "H"
+
+[node name="J" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 624.0
+margin_right = 724.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "J"
+
+[node name="K" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 728.0
+margin_right = 828.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "K"
+
+[node name="L" type="Button" parent="Keyboard/ASD" groups=["keyboard_keys"]]
+margin_left = 832.0
+margin_right = 932.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "L"
+
+[node name="ZXC" type="HBoxContainer" parent="Keyboard"]
+margin_left = 182.0
+margin_top = 314.0
+margin_right = 906.0
+margin_bottom = 464.0
+
+[node name="Z" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_right = 100.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "Z"
+
+[node name="X" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "X"
+
+[node name="C" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "C"
+
+[node name="V" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "V"
+
+[node name="B" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "B"
+
+[node name="N" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "N"
+
+[node name="M" type="Button" parent="Keyboard/ZXC" groups=["keyboard_keys"]]
+margin_left = 624.0
+margin_right = 724.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 100, 150 )
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = ExtResource( 14 )
+custom_styles/pressed = ExtResource( 14 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = ExtResource( 14 )
+custom_styles/normal = ExtResource( 14 )
+text = "M"
+
+[node name="Erase" type="Button" parent="."]
+margin_left = 912.0
+margin_top = 1614.0
+margin_right = 1080.0
+margin_bottom = 1764.0
+custom_fonts/font = ExtResource( 13 )
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 36 )
+custom_styles/disabled = SubResource( 37 )
+custom_styles/normal = SubResource( 38 )
+text = "ERASE"
+
+[node name="Word" type="RichTextLabel" parent="."]
+visible = false
+margin_top = 369.0
+margin_right = 1074.0
+margin_bottom = 448.0
+custom_fonts/normal_font = SubResource( 39 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Variables" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+
+[node name="SpeedLbl" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 120.0
+margin_right = 144.0
+margin_bottom = 183.0
+custom_colors/font_color = Color( 0.901961, 0.913725, 0.639216, 1 )
+custom_constants/line_spacing = 23
+custom_fonts/font = SubResource( 11 )
+text = "Speed
+25 MPH"
+align = 1
+valign = 1
+
+[node name="LevelLbl" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 20.0
+margin_right = 144.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0.901961, 0.913725, 0.639216, 1 )
+custom_constants/line_spacing = 23
+custom_fonts/font = SubResource( 11 )
+text = "Level
+1"
+align = 1
+valign = 1
+
+[node name="Menu" type="ColorRect" parent="."]
+margin_top = -120.0
+margin_right = 1080.0
+margin_bottom = 2497.0
+color = Color( 0.266667, 0.231373, 0.388235, 1 )
+
+[node name="Title" type="TextureRect" parent="Menu"]
+margin_top = 160.0
+margin_right = 96.0
+margin_bottom = 256.0
+rect_scale = Vector2( 11.25, 11.25 )
+texture = ExtResource( 8 )
+
+[node name="EasyBtn" type="Button" parent="Menu"]
+margin_left = 488.0
+margin_top = 1184.0
+margin_right = 728.0
+margin_bottom = 1424.0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 11 )
+text = "EASY"
+
+[node name="NormalBtn" type="Button" parent="Menu"]
+margin_left = 360.0
+margin_top = 1312.0
+margin_right = 600.0
+margin_bottom = 1552.0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/disabled = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+text = "NORMAL"
+
+[node name="HardBtn" type="Button" parent="Menu"]
+margin_left = 488.0
+margin_top = 1440.0
+margin_right = 728.0
+margin_bottom = 1680.0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+text = "HARD"
+
+[node name="QuitBtn" type="Button" parent="Menu"]
+margin_left = 360.0
+margin_top = 1568.0
+margin_right = 600.0
+margin_bottom = 1808.0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/focus = SubResource( 28 )
+custom_styles/disabled = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+text = "QUIT"
+
+[node name="GameOver" type="Panel" parent="."]
+visible = false
+margin_right = 1080.0
+margin_bottom = 1920.0
+
+[node name="PointsLabel" type="Label" parent="GameOver"]
+margin_top = 635.0
+margin_right = 1074.0
+margin_bottom = 925.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_constants/line_spacing = 60
+custom_fonts/font = SubResource( 7 )
+text = "GAME OVER"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Retry" type="Button" parent="GameOver"]
+margin_left = 687.0
+margin_top = 1595.0
+margin_right = 912.0
+margin_bottom = 1705.0
+custom_colors/font_color = Color( 0.117647, 0.823529, 0.823529, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "RETRY"
+
+[node name="Quit" type="Button" parent="GameOver"]
+margin_left = 110.0
+margin_top = 1595.0
+margin_right = 335.0
+margin_bottom = 1705.0
+custom_colors/font_color = Color( 0.823529, 0.117647, 0.117647, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "QUIT"
+
+[node name="ToggleMusic" type="CheckButton" parent="."]
+margin_left = 888.0
+margin_top = -48.0
+margin_right = 910.0
+margin_bottom = -26.0
+rect_scale = Vector2( 11.25, 11.25 )
+focus_mode = 0
+custom_icons/off = ExtResource( 18 )
+custom_icons/on_disabled = ExtResource( 17 )
+custom_icons/on = ExtResource( 17 )
+custom_icons/off_disabled = ExtResource( 18 )
+pressed = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="ShootSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Rumble" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[connection signal="area_shape_entered" from="Player/PlayerArea" to="." method="_on_PlayerArea_area_shape_entered"]
+[connection signal="pressed" from="Erase" to="." method="_on_Erase_pressed"]
+[connection signal="pressed" from="Menu/EasyBtn" to="." method="_on_EasyBtn_pressed"]
+[connection signal="pressed" from="Menu/NormalBtn" to="." method="_on_NormalBtn_pressed"]
+[connection signal="pressed" from="Menu/HardBtn" to="." method="_on_HardBtn_pressed"]
+[connection signal="pressed" from="Menu/QuitBtn" to="." method="_on_QuitBtn_pressed"]
+[connection signal="pressed" from="GameOver/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="GameOver/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="toggled" from="ToggleMusic" to="." method="_on_ToggleMusic_toggled"]
